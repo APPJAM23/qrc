@@ -8,6 +8,7 @@ import lombok.Getter;
 public class MissingSimpleResponse {
 
     private final Long id;
+    private final String pictureUrl;
     private final String name;
     private final Gender gender;
     private final Integer age;
@@ -15,6 +16,7 @@ public class MissingSimpleResponse {
 
     public MissingSimpleResponse(Missing missing) {
         this.id = missing.getId();
+        this.pictureUrl = missing.getPictureUrl();
         this.name = missing.getName();
         this.gender = missing.getGender();
         this.age = missing.getAge();
