@@ -25,10 +25,7 @@ jobs:
             app: java@17
             options:
               ports: 8080
-            context:
-              git:
-                url: git@github.com:${{ github.repository }}.git
-                ref: ${{ github.ref }}
+              buildenv:
                 - name: DB_NAME
                   value: ${{ secrets.DB_NAME }}
                 - name: TZ
