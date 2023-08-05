@@ -56,10 +56,8 @@ public class Missing {
     @Column(nullable = false)
     private String missingPlace;
 
-    @Column(nullable = false)
     private String missingClothes;
 
-    @Column(nullable = false)
     private String specialNote;
 
     @Column(nullable = false)
