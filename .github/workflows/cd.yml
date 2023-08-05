@@ -48,6 +48,8 @@ jobs:
                   value: ${{ secrets.S3_ACCESS_KEY }}
                 - name: S3_SECRET_KEY
                   value: ${{ secrets.S3_SECRET_KEY }}
+                - name: JWT_SECRET
+                  value: ${{ secrets.JWT_SECRET }}
             context:
               git:
                 url: git@github.com:${{ github.repository }}.git
