@@ -63,7 +63,7 @@ public class MissingController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
+    @PostMapping("/image")
     public UploadResponse uploadImage(
             @AuthenticationPrincipal User user,
             @RequestPart(value = "image") MultipartFile image
