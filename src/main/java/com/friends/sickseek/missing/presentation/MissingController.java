@@ -4,6 +4,7 @@ import com.friends.sickseek.missing.domain.type.MissingType;
 import com.friends.sickseek.missing.presentation.dto.request.ReportMissingRequest;
 import com.friends.sickseek.missing.presentation.dto.response.MissingResponse;
 import com.friends.sickseek.missing.presentation.dto.response.MissingSimpleResponse;
+import com.friends.sickseek.missing.service.FindMissingUseCase;
 import com.friends.sickseek.missing.service.QueryMissingListUseCase;
 import com.friends.sickseek.missing.service.QueryMissingUseCase;
 import com.friends.sickseek.missing.service.ReportMissingUseCase;
@@ -38,6 +39,7 @@ public class MissingController {
     private final QueryMissingListUseCase queryMissingListUseCase;
     private final QueryMissingUseCase queryMissingUseCase;
     private final UploadFileService uploadFileService;
+    private final FindMissingUseCase findMissingUseCase;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -69,5 +71,10 @@ public class MissingController {
             @RequestPart(value = "image") MultipartFile image
     ) {
         return uploadFileService.execute(image, FolderConstant.MISSING, UUID.randomUUID().toString());
+    }
+
+    @GetMapping("/find")
+    public MissingResponse findMissing() {
+        return findMissingUseCase.execute();
     }
 }
