@@ -21,6 +21,7 @@ public class ReportMissingUseCase {
                         .age(request.getAge())
                         .height(request.getHeight())
                         .weight(request.getWeight())
+                        .gender(request.getGender())
                         .missingDate(request.getMissingDate())
                         .missingPlace(request.getMissingPlace())
                         .missingClothes(request.getMissingClothes())
