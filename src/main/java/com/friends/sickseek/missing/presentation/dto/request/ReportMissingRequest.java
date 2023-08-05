@@ -3,6 +3,7 @@ package com.friends.sickseek.missing.presentation.dto.request;
 import com.friends.sickseek.missing.domain.type.Gender;
 import com.friends.sickseek.missing.domain.type.MissingType;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,7 +35,7 @@ public class ReportMissingRequest {
     @NotBlank
     private Integer weight;
 
-    @NotBlank
+    @NotNull
     private LocalDate missingDate;
 
     @NotBlank
