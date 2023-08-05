@@ -23,16 +23,16 @@ public class ReportMissingRequest {
     @NotBlank
     private String name;
 
-    @NotBlank
+    @NotNull
     private Integer age;
 
-    @NotBlank
+    @NotNull
     private Gender gender;
 
-    @NotBlank
+    @NotNull
     private Integer height;
 
-    @NotBlank
+    @NotNull
     private Integer weight;
 
     @NotNull
@@ -41,12 +41,10 @@ public class ReportMissingRequest {
     @NotBlank
     private String missingPlace;
 
-    @NotBlank
     private String missingClothes;
 
-    @NotBlank
     private String specialNote;
 
-    @NotBlank
+    @NotNull
     private MissingType type;
 }
