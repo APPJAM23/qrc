@@ -26,6 +26,7 @@ public class S3Config {
                 s3Properties.getAccessKey(), s3Properties.getSecretKey());
         return (AmazonS3Client) AmazonS3ClientBuilder.standard()
                 .withRegion(region)
+                .enablePathStyleAccess()
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
                 .build();
     }
