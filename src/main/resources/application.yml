@@ -77,10 +77,4 @@ spring:
     username: friends
     password: friends
 
-  data:
-    redis:
-      host: localhost
-      port: 6379
-      password: friends
-
 debug: true
