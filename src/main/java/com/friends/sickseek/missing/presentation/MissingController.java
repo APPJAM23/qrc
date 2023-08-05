@@ -74,7 +74,7 @@ public class MissingController {
     }
 
     @GetMapping("/find")
-    public MissingResponse findMissing() {
+    public MissingSimpleResponse findMissing() {
         return findMissingUseCase.execute();
     }
 }

@@ -2,6 +2,7 @@ package com.friends.sickseek.missing.service;
 
 import com.friends.sickseek.missing.domain.Missing;
 import com.friends.sickseek.missing.presentation.dto.response.MissingResponse;
+import com.friends.sickseek.missing.presentation.dto.response.MissingSimpleResponse;
 import com.friends.sickseek.missing.repository.MissingRepository;
 import com.friends.sickseek.shared.annotation.UseCase;
 import lombok.RequiredArgsConstructor;
@@ -14,9 +15,9 @@ public class FindMissingUseCase {
 
     private final MissingRepository missingRepository;
 
-    public MissingResponse execute() {
+    public MissingSimpleResponse execute() {
         Missing missing = getRandomOne();
-        return new MissingResponse(missing);
+        return new MissingSimpleResponse(missing);
     }
 
     public Missing getRandomOne() {
