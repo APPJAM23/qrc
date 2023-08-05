@@ -2,7 +2,7 @@ package com.friends.sickseek.user.domain;
 
 import com.friends.sickseek.shared.entity.BaseTimeEntity;
 import com.friends.sickseek.shared.util.PasswordUtil;
-import com.friends.sickseek.user.type.Authority;
+import com.friends.sickseek.user.domain.type.Authority;
 import com.friends.sickseek.user.value.Password;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;

@@ -1,4 +1,4 @@
-package com.friends.sickseek.user.type;
+package com.friends.sickseek.user.domain.type;
 
 import com.friends.sickseek.shared.property.EnumProperty;
 import lombok.Getter;
