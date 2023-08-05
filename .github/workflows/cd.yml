@@ -22,7 +22,7 @@ jobs:
           stage: main
           yaml: |
             name: qrc
-            app: java@8
+            app: java@17
             options:
               ports: 8080
             context:
